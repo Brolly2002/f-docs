@@ -33,6 +33,7 @@ io.on('connection', (socket) => {
         socket.on('send-changes', delta => {
             // jo changes aenge vo hme broadcast krna hoga, sbhi users ko dikhana hoga jo connected hai
             // breadcast ek particular document id pe honge
+            console.log("mein chal rha hu");
             socket.broadcast.to(documentID).emit('receive-changes', delta);
         });
 
@@ -40,7 +41,6 @@ io.on('connection', (socket) => {
             await updateDocument(documentID, data);
         });
     });
-
 
 });
 
