@@ -29,11 +29,11 @@ io.on('connection', (socket) => {
         // this allows broadcasting changes to only those users having same ID
         socket.join(documentID);
         socket.emit('load-document', document.data);
-        console.log("document-data : ", document.data);
         socket.on('send-changes', delta => {
             // jo changes aenge vo hme broadcast krna hoga, sbhi users ko dikhana hoga jo connected hai
             // breadcast ek particular document id pe honge
             // console.log("mein chal rha hu
+            console.log("delta : ", delta);
             socket.broadcast.to(documentID).emit('receive-changes', delta);
         });
 
