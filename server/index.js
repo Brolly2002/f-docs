@@ -34,6 +34,7 @@ io.on('connection', (socket) => {
             // breadcast ek particular document id pe honge
             // console.log("mein chal rha hu
             console.log("delta : ", delta);
+            console.log(documentID);
             socket.broadcast.to(documentID).emit('receive-changes', delta);
         });
 
