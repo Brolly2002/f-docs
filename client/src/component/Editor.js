@@ -57,7 +57,7 @@ const Editor = () => {
 
     useEffect(() => {
         // a new socket connection is establishing 
-        const socketServer = io('http://localhost:9000');
+        const socketServer = io('https://f-doc-server.onrender.com');
         setSocket(socketServer);
         // the returned function is a cleanup function that will be executed when the component is unmounted
         return () => {

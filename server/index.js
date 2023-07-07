@@ -15,7 +15,7 @@ const io = new Server(PORT, {
     // CORS (Cross-Origin Resource Sharing) is a browser mechanism that allows web pages to make requests to resources on a different domain, relaxing the same-origin policy. 
     // It involves adding specific headers to server responses to control which origins are allowed access to the resources.
     cors: {
-        origin: 'http://localhost:3000',
+        origin: 'https://f-doc.netlify.app',
         methods: ['GET', 'POST']
     }
 });
