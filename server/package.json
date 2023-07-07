@@ -1,0 +1,18 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "save documnents of the doc",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "author": "priyanshu",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^7.3.1",
+    "nodemon": "^2.0.22",
+    "socket.io": "^4.7.1"
+  }
+}
